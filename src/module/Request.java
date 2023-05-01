@@ -1,9 +1,12 @@
 package module;
 
+import module.Person;
+
 public class Request {
     private Person owner;
     private Car car;
     private int state; /*-1 Pending, 0 In process, 1 Finished*/
+    private Services petitions;
    
 
     public Request(Person owner, Car car, int state) {
