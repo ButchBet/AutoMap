@@ -41,6 +41,13 @@ public class Add extends javax.swing.JFrame {
         plate = new javax.swing.JTextField();
         message = new javax.swing.JLabel();
         submit = new javax.swing.JButton();
+        service1 = new javax.swing.JRadioButton();
+        service2 = new javax.swing.JRadioButton();
+        service3 = new javax.swing.JRadioButton();
+        service4 = new javax.swing.JRadioButton();
+        service5 = new javax.swing.JRadioButton();
+        service6 = new javax.swing.JRadioButton();
+        service7 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,9 +70,38 @@ public class Add extends javax.swing.JFrame {
         jLabel8.setText("Model");
 
         message.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        message.setText("Message");
+        message.setText("--");
 
         submit.setText("Submit");
+
+        service1.setText("Hand wash");
+
+        service2.setText("Integrated trolley dryer in the equipment");
+        service2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                service2ActionPerformed(evt);
+            }
+        });
+
+        service3.setText("Special wash brushes");
+
+        service4.setText("Special applications");
+        service4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                service4ActionPerformed(evt);
+            }
+        });
+
+        service5.setText("Porcelain coating and bodywork crystallization.");
+
+        service6.setText("Deep washing");
+        service6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                service6ActionPerformed(evt);
+            }
+        });
+
+        service7.setText("Delivery");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,21 +109,33 @@ public class Add extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(63, 63, 63)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(submit, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                    .addComponent(jLabel5)
-                    .addComponent(plate, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                    .addComponent(jLabel8)
-                    .addComponent(model, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                    .addComponent(jLabel4)
-                    .addComponent(make, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                    .addComponent(jLabel3)
-                    .addComponent(phoneNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                    .addComponent(jLabel2)
-                    .addComponent(lastName, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                    .addComponent(jLabel1)
-                    .addComponent(firstName, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
-                    .addComponent(message, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel5)
+                            .addComponent(plate, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
+                            .addComponent(jLabel8)
+                            .addComponent(model, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
+                            .addComponent(jLabel4)
+                            .addComponent(make, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
+                            .addComponent(jLabel3)
+                            .addComponent(phoneNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
+                            .addComponent(jLabel2)
+                            .addComponent(lastName, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
+                            .addComponent(jLabel1)
+                            .addComponent(firstName, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE))
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(service1)
+                            .addComponent(service2)
+                            .addComponent(service3)
+                            .addComponent(service4)
+                            .addComponent(service5)
+                            .addComponent(service6)
+                            .addComponent(service7)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(submit, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 634, Short.MAX_VALUE)
+                        .addComponent(message, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -95,33 +143,50 @@ public class Add extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(73, 73, 73)
                 .addComponent(jLabel1)
-                .addGap(5, 5, 5)
-                .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addGap(5, 5, 5)
-                .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addGap(5, 5, 5)
-                .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addGap(5, 5, 5)
-                .addComponent(make, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addGap(5, 5, 5)
-                .addComponent(model, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addGap(5, 5, 5)
-                .addComponent(plate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(service1))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addGap(10, 10, 10)
+                        .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3)
+                        .addGap(9, 9, 9)
+                        .addComponent(phoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4)
+                        .addGap(9, 9, 9)
+                        .addComponent(make, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel8)
+                        .addGap(5, 5, 5)
+                        .addComponent(model, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5)
+                        .addGap(5, 5, 5)
+                        .addComponent(plate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(service2)
+                        .addGap(18, 18, 18)
+                        .addComponent(service3)
+                        .addGap(18, 18, 18)
+                        .addComponent(service4)
+                        .addGap(18, 18, 18)
+                        .addComponent(service5)
+                        .addGap(18, 18, 18)
+                        .addComponent(service6)
+                        .addGap(18, 18, 18)
+                        .addComponent(service7)))
                 .addGap(18, 18, 18)
                 .addComponent(message)
                 .addGap(18, 18, 18)
                 .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         pack();
@@ -130,6 +195,18 @@ public class Add extends javax.swing.JFrame {
     private void modelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_modelActionPerformed
+
+    private void service2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_service2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_service2ActionPerformed
+
+    private void service4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_service4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_service4ActionPerformed
+
+    private void service6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_service6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_service6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,6 +257,13 @@ public class Add extends javax.swing.JFrame {
     public javax.swing.JTextField model;
     public javax.swing.JTextField phoneNumber;
     public javax.swing.JTextField plate;
+    public javax.swing.JRadioButton service1;
+    public javax.swing.JRadioButton service2;
+    public javax.swing.JRadioButton service3;
+    public javax.swing.JRadioButton service4;
+    public javax.swing.JRadioButton service5;
+    public javax.swing.JRadioButton service6;
+    private javax.swing.JCheckBox service7;
     public javax.swing.JButton submit;
     // End of variables declaration//GEN-END:variables
 }
