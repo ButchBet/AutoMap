@@ -4,6 +4,7 @@ public class Request {
     private Person owner;
     private Car car;
     private int state; /*-1 Pending, 0 In process, 1 Finished*/
+   
 
     public Request(Person owner, Car car, int state) {
         this.owner = owner;
