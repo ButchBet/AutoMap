@@ -3,7 +3,9 @@ package controler;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.AbstractButton;
 import module.Request;
+import module.ValidationTools;
 import view.*;
 
 public class Controler implements ActionListener{
@@ -49,6 +51,13 @@ public class Controler implements ActionListener{
                 add.setVisible(false);
                 requests.setVisible(false);
                 home.setVisible(true);
+                break;
+            case "Submit":
+                ValidationTools tools = new ValidationTools();
+                
+                String button = tools.getSelectedButtonText(add.getButtonGroup1());
+                
+                System.out.println(button);
                 break;
         }
     }
