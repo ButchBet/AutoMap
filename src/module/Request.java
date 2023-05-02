@@ -7,13 +7,17 @@ public class Request {
     private Car car;
     private int state; /*-1 Pending, 0 In process, 1 Finished*/
     private String service;
+    private double total;
+    private boolean delivery;
    
 
-    public Request(Person owner, Car car, int state, String service) {
+    public Request(Person owner, Car car, int state, String service, double total, boolean delivery) {
         this.owner = owner;
         this.car = car;
         this.state = state;
         this.service = service;
+        this.total = total;
+        this.delivery = delivery;
     }
 
     public Person getOwner() {
@@ -34,5 +38,13 @@ public class Request {
 
     public String getService() {
         return service;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public boolean isDelivery() {
+        return delivery;
     }
 }

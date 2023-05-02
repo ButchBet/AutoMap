@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.ButtonGroup;
+
 /**
  *
  * @author butch
@@ -243,6 +245,22 @@ public class Add extends javax.swing.JFrame {
             }
         });
     }
+
+    public ButtonGroup getButtonGroup1() {
+        return buttonGroup1;
+    }
+    
+    public void addingButtons() {
+        this.buttonGroup1.add(this.service1);
+        this.buttonGroup1.add(this.service2);
+        this.buttonGroup1.add(this.service3);
+        this.buttonGroup1.add(this.service4);
+        this.buttonGroup1.add(this.service5);
+        this.buttonGroup1.add(this.service6);
+    }
+    
+    
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
