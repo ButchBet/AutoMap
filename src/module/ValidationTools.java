@@ -16,4 +16,10 @@ public class ValidationTools {
 
         return null;
     }
+    
+    public boolean isAPhoneNumber(String phoneNumber) {
+        String regex = "\\d{10}";
+        
+        return phoneNumber.matches(regex);
+    }
 }

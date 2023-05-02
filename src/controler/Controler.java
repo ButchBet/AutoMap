@@ -55,9 +55,9 @@ public class Controler implements ActionListener{
             case "Submit":
                 ValidationTools tools = new ValidationTools();
                 
-                String button = tools.getSelectedButtonText(add.getButtonGroup1());
+                String service = tools.getSelectedButtonText(add.getButtonGroup1());
                 
-                System.out.println(button);
+                System.out.println(tools.isAPhoneNumber(add.phoneNumber.getText()));
                 break;
         }
     }
