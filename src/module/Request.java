@@ -6,14 +6,14 @@ public class Request {
     private Person owner;
     private Car car;
     private int state; /*-1 Pending, 0 In process, 1 Finished*/
-    private Services services;
+    private String service;
    
 
-    public Request(Person owner, Car car, int state, Services services) {
+    public Request(Person owner, Car car, int state, String service) {
         this.owner = owner;
         this.car = car;
         this.state = state;
-        this.services = services;
+        this.service = service;
     }
 
     public Person getOwner() {
@@ -32,7 +32,7 @@ public class Request {
         this.state = state;
     }  
 
-    public Services getServices() {
-        return services;
+    public String getService() {
+        return service;
     }
 }
