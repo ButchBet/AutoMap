@@ -47,6 +47,8 @@ public class Controler implements ActionListener{
             case "View requests":
                 requests.setVisible(true);
                 home.setVisible(false);
+                
+                fillTable();
                 break;
             case "Add request":
                 add.setVisible(true);
@@ -61,6 +63,9 @@ public class Controler implements ActionListener{
                 createRequest();
                 break;
         }
+    }
+    
+    private void fillTable() {
     }
     
     private void createRequest() {
