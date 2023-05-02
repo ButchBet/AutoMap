@@ -52,6 +52,13 @@ public class Add extends javax.swing.JFrame {
         service6 = new javax.swing.JRadioButton();
         service7 = new javax.swing.JCheckBox();
         home = new javax.swing.JButton();
+        cost1 = new javax.swing.JLabel();
+        cost2 = new javax.swing.JLabel();
+        cost3 = new javax.swing.JLabel();
+        cost4 = new javax.swing.JLabel();
+        cost5 = new javax.swing.JLabel();
+        cost6 = new javax.swing.JLabel();
+        cost7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -96,7 +103,12 @@ public class Add extends javax.swing.JFrame {
             }
         });
 
-        service5.setText("Porcelain coating and bodywork crystallization.");
+        service5.setText("orcelain coating and bodywork crystallization.");
+        service5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                service5ActionPerformed(evt);
+            }
+        });
 
         service6.setText("Deep washing");
         service6.addActionListener(new java.awt.event.ActionListener() {
@@ -109,13 +121,27 @@ public class Add extends javax.swing.JFrame {
 
         home.setText("Home");
 
+        cost1.setText("890000");
+
+        cost2.setText("50000");
+
+        cost3.setText("123000");
+
+        cost4.setText("230000");
+
+        cost5.setText("4500000");
+
+        cost6.setText("356000");
+
+        cost7.setText("100000");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(63, 63, 63)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -136,17 +162,37 @@ public class Add extends javax.swing.JFrame {
                                 .addGap(169, 169, 169)))
                         .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(service1)
-                            .addComponent(service2)
-                            .addComponent(service3)
-                            .addComponent(service4)
-                            .addComponent(service5)
-                            .addComponent(service6)
-                            .addComponent(service7)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(submit, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 634, Short.MAX_VALUE)
-                        .addComponent(message, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(62, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(service1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cost2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(service2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cost1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(service3)
+                                .addGap(18, 18, 18)
+                                .addComponent(cost3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(service4)
+                                .addGap(18, 18, 18)
+                                .addComponent(cost4))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(service5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cost5))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(service6)
+                                .addGap(18, 18, 18)
+                                .addComponent(cost6))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(service7)
+                                .addGap(18, 18, 18)
+                                .addComponent(cost7))))
+                    .addComponent(submit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(message, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,7 +204,8 @@ public class Add extends javax.swing.JFrame {
                 .addGap(4, 4, 4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(service1))
+                    .addComponent(service1)
+                    .addComponent(cost2))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -183,17 +230,30 @@ public class Add extends javax.swing.JFrame {
                         .addComponent(plate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
-                        .addComponent(service2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(service2)
+                                    .addComponent(cost1))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(service3)
+                                    .addComponent(cost3))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(service4)
+                                    .addComponent(cost4))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(service5)
+                                    .addComponent(cost5))
+                                .addGap(18, 18, 18)
+                                .addComponent(service6))
+                            .addComponent(cost6))
                         .addGap(18, 18, 18)
-                        .addComponent(service3)
-                        .addGap(18, 18, 18)
-                        .addComponent(service4)
-                        .addGap(18, 18, 18)
-                        .addComponent(service5)
-                        .addGap(18, 18, 18)
-                        .addComponent(service6)
-                        .addGap(18, 18, 18)
-                        .addComponent(service7)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(service7)
+                            .addComponent(cost7))))
                 .addGap(18, 18, 18)
                 .addComponent(message)
                 .addGap(18, 18, 18)
@@ -219,6 +279,10 @@ public class Add extends javax.swing.JFrame {
     private void service6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_service6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_service6ActionPerformed
+
+    private void service5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_service5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_service5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -274,6 +338,13 @@ public class Add extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    public javax.swing.JLabel cost1;
+    public javax.swing.JLabel cost2;
+    public javax.swing.JLabel cost3;
+    public javax.swing.JLabel cost4;
+    public javax.swing.JLabel cost5;
+    public javax.swing.JLabel cost6;
+    public javax.swing.JLabel cost7;
     public javax.swing.JTextField firstName;
     public javax.swing.JButton home;
     private javax.swing.JLabel jLabel1;
