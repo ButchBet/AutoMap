@@ -50,7 +50,6 @@ public class Controler implements ActionListener{
                 requests.setVisible(false);
                 home.setVisible(true);
                 break;
-            }
         }
     }
 }
