@@ -23,4 +23,7 @@ public class Car {
         return plate;
     }
     
+    public String toString() {
+        return "\nMake: " + make + "\nModel: " + model + "\nPlate: " + plate; 
+    }
 }

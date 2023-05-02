@@ -47,4 +47,8 @@ public class Request {
     public boolean isDelivery() {
         return delivery;
     }
+    
+    public String toString() {
+        return owner.toString() + car.toString() + "\nState: " + state + "\nService: " + service + "\nTotal: " + total + "\nDelivery: " + delivery;
+    }
 }

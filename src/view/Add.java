@@ -103,7 +103,7 @@ public class Add extends javax.swing.JFrame {
             }
         });
 
-        service5.setText("orcelain coating and bodywork crystallization.");
+        service5.setText("Orcelain coating and bodywork crystallization");
         service5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 service5ActionPerformed(evt);
@@ -192,7 +192,7 @@ public class Add extends javax.swing.JFrame {
                                 .addComponent(cost7))))
                     .addComponent(submit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(message, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -332,6 +332,10 @@ public class Add extends javax.swing.JFrame {
         this.buttonGroup1.add(this.service6);
     }
     
+    public javax.swing.JCheckBox getDelivery() {
+        return service7;
+    }
+    
     
     
     
@@ -365,7 +369,7 @@ public class Add extends javax.swing.JFrame {
     public javax.swing.JRadioButton service4;
     public javax.swing.JRadioButton service5;
     public javax.swing.JRadioButton service6;
-    private javax.swing.JCheckBox service7;
+    public javax.swing.JCheckBox service7;
     public javax.swing.JButton submit;
     // End of variables declaration//GEN-END:variables
 }

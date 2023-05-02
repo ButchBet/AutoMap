@@ -22,4 +22,8 @@ public class Person {
     public long getPhoneNumber() {
         return phoneNumber;
     }
+    
+    public String toString() {
+        return "First name: " + firstName + "\nLast name: " + lastName + "\nPhone number: " + phoneNumber;
+    }
 }

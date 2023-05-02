@@ -93,7 +93,7 @@
                   <Component id="submit" alignment="0" max="32767" attributes="0"/>
                   <Component id="message" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="71" max="32767" attributes="0"/>
+              <EmptySpace pref="73" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -298,7 +298,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="service5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="orcelain coating and bodywork crystallization."/>
+        <Property name="text" type="java.lang.String" value="Orcelain coating and bodywork crystallization"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="service5ActionPerformed"/>
@@ -322,6 +322,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Delivery"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="home">
       <Properties>
