@@ -32,24 +32,38 @@ public class Requests extends javax.swing.JFrame {
         home = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
 
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "First name", "Last name", "Phone number", "Make", "Model", "Plate", "Total", "Status"
+                "First name", "Last name", "Phone number", "Make", "Model", "Plate", "Status", "Service", "Total", "Delivery"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Long.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.Long.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Double.class, java.lang.Boolean.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
+        table.setColumnSelectionAllowed(true);
         jScrollPane2.setViewportView(table);
+        if (table.getColumnModel().getColumnCount() > 0) {
+            table.getColumnModel().getColumn(0).setHeaderValue("First name");
+            table.getColumnModel().getColumn(1).setHeaderValue("Last name");
+            table.getColumnModel().getColumn(2).setHeaderValue("Phone number");
+            table.getColumnModel().getColumn(3).setHeaderValue("Make");
+            table.getColumnModel().getColumn(4).setHeaderValue("Model");
+            table.getColumnModel().getColumn(5).setHeaderValue("Plate");
+            table.getColumnModel().getColumn(6).setHeaderValue("Status");
+            table.getColumnModel().getColumn(7).setHeaderValue("Service");
+            table.getColumnModel().getColumn(8).setHeaderValue("Total");
+            table.getColumnModel().getColumn(9).setHeaderValue("Delivery");
+        }
 
         home.setText("Home");
 
@@ -71,8 +85,8 @@ public class Requests extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(home)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 

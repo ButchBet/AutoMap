@@ -4,7 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.AbstractButton;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
 import module.Car;
 import module.Person;
 import module.Request;
@@ -66,6 +70,29 @@ public class Controler implements ActionListener{
     }
     
     private void fillTable() {
+        DefaultTableModel model = (DefaultTableModel) requests.table.getModel();
+        
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        
+        centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
+        
+        while (model.getRowCount() > 0) {
+            model.removeRow(0);
+        }
+        
+        if(!requestsList.isEmpty()) {
+            // Created row per request and filling the columns 
+            for(int i = 0; i < requestsList.size(); i++) {
+                model.addRow(new Object[]{requestsList.get(i).getOwner().getFirstName(), requestsList.get(i).getOwner().getLastName(), requestsList.get(i).getOwner().getPhoneNumber(),
+                                  requestsList.get(i).getCar().getMake(), requestsList.get(i).getCar().getModel(), requestsList.get(i).getCar().getPlate(),
+                                  requestsList.get(i).getState(), requestsList.get(i).getService(), requestsList.get(i).getTotal(), requestsList.get(i).isDelivery()});   
+            }
+            
+            // Putting the columns contenct in the left side
+            for(int i = 0; i < requests.table.getColumnCount(); i++) {
+                requests.table.getColumnModel().getColumn(i).setCellRenderer( centerRenderer );
+            }
+        }
     }
     
     private void createRequest() {
@@ -93,9 +120,9 @@ public class Controler implements ActionListener{
                     
             Request request = new Request(owner, car, -1, service, total, add.service7.isSelected());
                     
-            requestsList.add(request);
-                    
-           System.out.println(request.toString());
+            requestsList.add(request);                    
+        } else {
+            add.message.setText("Invalid data.");
         }
     }
 }
