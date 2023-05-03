@@ -62,16 +62,25 @@ public class Add extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        firstName.setText("Kevin");
+
         jLabel1.setText("First name");
+
+        lastName.setText("Salazar");
 
         jLabel2.setText("Last name");
 
+        phoneNumber.setText("3015784403");
+
         jLabel3.setText("Phone number");
+
+        make.setText("Tesla");
 
         jLabel4.setText("Make");
 
         jLabel5.setText("Plate");
 
+        model.setText("2024");
         model.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modelActionPerformed(evt);
@@ -79,6 +88,8 @@ public class Add extends javax.swing.JFrame {
         });
 
         jLabel8.setText("Model");
+
+        plate.setText("VTA05E");
 
         message.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         message.setText("--");
@@ -118,6 +129,11 @@ public class Add extends javax.swing.JFrame {
         });
 
         service7.setText("Delivery");
+        service7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                service7ActionPerformed(evt);
+            }
+        });
 
         home.setText("Home");
 
@@ -283,6 +299,10 @@ public class Add extends javax.swing.JFrame {
     private void service5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_service5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_service5ActionPerformed
+
+    private void service7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_service7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_service7ActionPerformed
 
     /**
      * @param args the command line arguments
